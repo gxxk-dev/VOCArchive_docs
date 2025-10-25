@@ -95,4 +95,4 @@ MediaSource / Asset (关联到作品)
 - **页面数据类型** (page-data.ts)：前端页面所需的数据结构
 - **管理后台类型** (admin-data.ts)：管理后台特有的数据结构
 
-这种架构提升了代码的可维护性、可测试性和性能。详见：[中间件与服务层架构](../architecture/middleware-and-services.md)
+这种架构提升了代码的可维护性、可测试性和性能。
