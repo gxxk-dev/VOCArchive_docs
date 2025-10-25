@@ -115,5 +115,5 @@ graph TB
 ---
 
 <div style="text-align: center; margin-top: 2rem; color: #666; font-size: 0.9em;">
-  此文档技术参照版本： <code>commit 41ac5455b9753c9bbbf791e03feae0f68248d61f(branch main)</code>
+  此文档技术参照版本： <code>commit 6d3de88(branch main)</code>
 </div>
