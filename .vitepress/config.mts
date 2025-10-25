@@ -48,7 +48,8 @@ export default defineConfig({
           { text: 'Admin 多 iframe 架构', link: '/architecture/admin-iframe' },
           { text: '双 ID 系统', link: '/architecture/dual-id-system' },
           { text: '外部存储抽象', link: '/architecture/external-storage' },
-          { text: 'SSR 与 Service Worker', link: '/architecture/ssr-and-sw' }
+          { text: 'SSR 与 Service Worker', link: '/architecture/ssr-and-sw' },
+          { text: '版本号机制', link: '/architecture/versioning' }
         ]
       }
     ],

@@ -36,8 +36,8 @@ VOCArchive 的几个关键设计决策：
 
 ### 1. 双 ID 系统
 
-所有实体同时拥有 `id`（自增整数）和 `uuid`（文本）：
-- **UUID**: 用于外部 API 和 URL，分布式友好
+所有实体同时拥有 `id`（自增整数）和 `index`（文本）：
+- **Index**: 用于外部 API 和 URL，分布式友好，简短易读（8 字符 nanoid）
 - **ID**: 用于内部关联查询，性能优化
 
 详见：[双 ID 系统](../architecture/dual-id-system.md)
@@ -73,3 +73,26 @@ MediaSource / Asset (关联到作品)
 ```
 
 详见：[外部存储抽象](../architecture/external-storage.md)
+
+### 5. 分层中间件与服务架构
+
+采用清晰的分层架构，将业务逻辑从路由处理中分离：
+
+```
+请求 → 中间件层 → 路由层 → 服务层 → 数据库操作层
+```
+
+**中间件层** (`src/app/middleware/`)：
+- **数据库中间件**：统一注入 DB 客户端到上下文
+- **JWT 中间件**：统一处理认证逻辑
+- **错误处理中间件**：全局错误处理和日志记录
+
+**服务层** (`src/app/services/`)：
+- **页面服务** (page-service.ts)：封装页面数据加载逻辑，支持并行加载
+- **编辑器服务** (admin-editor-service.ts)：封装管理后台编辑器业务逻辑
+
+**类型系统** (`src/app/types/`)：
+- **页面数据类型** (page-data.ts)：前端页面所需的数据结构
+- **管理后台类型** (admin-data.ts)：管理后台特有的数据结构
+
+这种架构提升了代码的可维护性、可测试性和性能。详见：[中间件与服务层架构](../architecture/middleware-and-services.md)
