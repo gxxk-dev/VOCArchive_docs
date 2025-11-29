@@ -51,6 +51,15 @@ export default defineConfig({
           { text: 'SSR 与 Service Worker', link: '/architecture/ssr-and-sw' },
           { text: '版本号机制', link: '/architecture/versioning' }
         ]
+      },
+      {
+        text: '即将实现',
+        collapsed: false,
+        items: [
+          //{ text: '整体规划', link: '/future/protocol' },
+          //{ text: '数据结构', link: '/future/data-struct' },
+          { text: 'TODO', link: '/future/todo' },
+        ]
       }
     ],
 
