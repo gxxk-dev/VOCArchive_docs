@@ -1,6 +1,9 @@
 # VOCArchive(Future ver.) TODO
 
+这是 VOCArchive 的未来版本，完整数据存储将完全位于IPFS上，目前处于规划阶段。
+
 我(gxxk-dev)将在此处记录一些需要进一步商讨/计划的功能。
+
 如果你有一些好的点子与建议，欢迎在[Github Repo/VOCArchive_Future Discussion](https://github.com/gxxk-dev/VOCArchive_Future/discussions)中提出。
 
 1. 数据质量优化
@@ -8,6 +11,7 @@
         1. 聚合体 机制：返回同一实体下关联的多个对象
     2. workRelation防灌水
     3. 信任网络
+    4. 对象合并
 2. 更加智能的搜索
     1. 向量搜索
     2. 音频指纹
